@@ -1,0 +1,12 @@
+{
+    "name": "jdenoc/tailwind-colors",
+    "description": "Provides a PHP class that contains colors documented in tailwindcss",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jdenoc\\TailwindColors\\": "src/"
+        }
+    },
+    "require": {}
+}
