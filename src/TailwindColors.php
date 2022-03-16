@@ -4,11 +4,11 @@ namespace Jdenoc\TailwindColors;
 
 use InvalidArgumentException;
 
-/**
- * @link    https://tailwindcss.com/docs/customizing-colors#default-color-palette
- */
 class TailwindColors {
 
+    /**
+     * @link    https://tailwindcss.com/docs/customizing-colors#default-color-palette
+     */
     private static $colorPalette = [
         'black' => ['#000000'],
         'white' => ['#ffffff'],
@@ -283,8 +283,13 @@ class TailwindColors {
 //    }
 
     public function getColor(string $colorName, int $colorStrength):string{
-        if (!static::$colorPalette[$colorName]) {
-            $permitted_colors = array_keys(static::$colorPalette);
+        $colorName = strtolower($colorName);
+        $permitted_colors = $this->getColorNames();
+        $permitted_color_strengths = array_keys(
+            self::$colorPalette[$colorName]
+        );
+
+        if(!in_array($colorName, $permitted_colors)){
             throw new InvalidArgumentException(
                 sprintf(
                     "Invalid colorName [%s] provided. Valid colorName values: %s",
@@ -292,10 +297,7 @@ class TailwindColors {
                     implode(',', $permitted_colors)
                 )
             );
-        } elseif (!static::$colorPalette[$colorName][$colorStrength]) {
-            $permitted_color_strengths = array_keys(
-                static::$colorPalette[$colorName]
-            );
+        } elseif (!in_array($colorStrength, $permitted_color_strengths)) {
             throw new InvalidArgumentException(
                 sprintf(
                     "Invalid colorStrength [%d] provided. Valid colorStrength values: %s",
@@ -304,8 +306,12 @@ class TailwindColors {
                 )
             );
         } else {
-            return static::$colorPalette[$colorName][$colorStrength];
+            return self::$colorPalette[$colorName][$colorStrength];
         }
+    }
+
+    public function getColorNames():array{
+        return array_keys(self::$colorPalette);
     }
 
     public function black():string{
