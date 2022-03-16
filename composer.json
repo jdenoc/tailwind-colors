@@ -1,6 +1,6 @@
 {
     "name": "jdenoc/tailwind-colors",
-    "description": "Provides a PHP class that contains colors documented in tailwindcss",
+    "description": "Provides a PHP class that contains hex value colors documented in the TailwindCSS framework",
     "type": "library",
     "license": "MIT",
     "autoload": {
