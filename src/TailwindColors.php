@@ -7,7 +7,8 @@ use InvalidArgumentException;
 class TailwindColors {
 
     /**
-     * @link    https://tailwindcss.com/docs/customizing-colors#default-color-palette
+     * @link https://tailwindcss.com/docs/customizing-colors#default-color-palette
+     * Colors are accurate as of tailwindcss v3.4.13
      */
     private static $colorPalette = [
         'black' => ['#000000'],
@@ -23,6 +24,7 @@ class TailwindColors {
             700 => '#334155',
             800 => '#1e293b',
             900 => '#0f172a',
+            950 => "#020617",
         ],
         'gray' => [
             50 => '#f9fafb',
@@ -35,6 +37,7 @@ class TailwindColors {
             700 => '#374151',
             800 => '#1f2937',
             900 => '#111827',
+            950 => "#030712",
         ],
         'zinc' => [
             50 => '#fafafa',
@@ -47,6 +50,7 @@ class TailwindColors {
             700 => '#3f3f46',
             800 => '#27272a',
             900 => '#18181b',
+            950 => "#09090b",
         ],
         'neutral' => [
             50 => '#fafafa',
@@ -59,6 +63,7 @@ class TailwindColors {
             700 => '#404040',
             800 => '#262626',
             900 => '#171717',
+            950 => "#0a0a0a",
         ],
         'stone' => [
             50 => '#fafaf9',
@@ -71,6 +76,7 @@ class TailwindColors {
             700 => '#44403c',
             800 => '#292524',
             900 => '#1c1917',
+            950 => "#0c0a09",
         ],
         'red' => [
             50 => '#fef2f2',
@@ -83,6 +89,7 @@ class TailwindColors {
             700 => '#b91c1c',
             800 => '#991b1b',
             900 => '#7f1d1d',
+            950 => "#450a0a",
         ],
         'orange' => [
             50 => '#fff7ed',
@@ -95,6 +102,7 @@ class TailwindColors {
             700 => '#c2410c',
             800 => '#9a3412',
             900 => '#7c2d12',
+            950 => "#431407",
         ],
         'amber' => [
             50 => '#fffbeb',
@@ -107,6 +115,7 @@ class TailwindColors {
             700 => '#b45309',
             800 => '#92400e',
             900 => '#78350f',
+            950 => "#451a03",
         ],
         'yellow' => [
             50 => '#fefce8',
@@ -119,6 +128,7 @@ class TailwindColors {
             700 => '#a16207',
             800 => '#854d0e',
             900 => '#713f12',
+            950 => "#422006",
         ],
         'lime' => [
             50 => '#f7fee7',
@@ -131,6 +141,7 @@ class TailwindColors {
             700 => '#4d7c0f',
             800 => '#3f6212',
             900 => '#365314',
+            950 => "#1a2e05",
         ],
         'green' => [
             50 => '#f0fdf4',
@@ -143,6 +154,7 @@ class TailwindColors {
             700 => '#15803d',
             800 => '#166534',
             900 => '#14532d',
+            950 => "#052e16",
         ],
         'emerald' => [
             50 => '#ecfdf5',
@@ -155,6 +167,7 @@ class TailwindColors {
             700 => '#047857',
             800 => '#065f46',
             900 => '#064e3b',
+            950 => "#022c22",
         ],
         'teal' => [
             50 => '#f0fdfa',
@@ -167,6 +180,7 @@ class TailwindColors {
             700 => '#0f766e',
             800 => '#115e59',
             900 => '#134e4a',
+            950 => "#042f2e",
         ],
         'cyan' => [
             50 => '#ecfeff',
@@ -179,6 +193,7 @@ class TailwindColors {
             700 => '#0e7490',
             800 => '#155e75',
             900 => '#164e63',
+            950 => "#083344",
         ],
         'sky' => [
             50 => '#f0f9ff',
@@ -191,6 +206,7 @@ class TailwindColors {
             700 => '#0369a1',
             800 => '#075985',
             900 => '#0c4a6e',
+            950 => "#082f49",
         ],
         'blue' => [
             50 => '#eff6ff',
@@ -203,6 +219,7 @@ class TailwindColors {
             700 => '#1d4ed8',
             800 => '#1e40af',
             900 => '#1e3a8a',
+            950 => "#172554",
         ],
         'indigo' => [
             50 => '#eef2ff',
@@ -215,6 +232,7 @@ class TailwindColors {
             700 => '#4338ca',
             800 => '#3730a3',
             900 => '#312e81',
+            950 => "#1e1b4b",
         ],
         'violet' => [
             50 => '#f5f3ff',
@@ -227,6 +245,7 @@ class TailwindColors {
             700 => '#6d28d9',
             800 => '#5b21b6',
             900 => '#4c1d95',
+            950 => "#2e1065",
         ],
         'purple' => [
             50 => '#faf5ff',
@@ -239,6 +258,7 @@ class TailwindColors {
             700 => '#7e22ce',
             800 => '#6b21a8',
             900 => '#581c87',
+            950 => "#3b0764",
         ],
         'fuchsia' => [
             50 => '#fdf4ff',
@@ -251,6 +271,7 @@ class TailwindColors {
             700 => '#a21caf',
             800 => '#86198f',
             900 => '#701a75',
+            950 => "#4a044e",
         ],
         'pink' => [
             50 => '#fdf2f8',
@@ -263,6 +284,7 @@ class TailwindColors {
             700 => '#be185d',
             800 => '#9d174d',
             900 => '#831843',
+            950 => "#500724",
         ],
         'rose' => [
             50 => '#fff1f2',
@@ -274,7 +296,8 @@ class TailwindColors {
             600 => '#e11d48',
             700 => '#be123c',
             800 => '#9f1239',
-            900 => '#881337'
+            900 => '#881337',
+            950 => "#4c0519",
         ],
     ];
 
@@ -282,7 +305,7 @@ class TailwindColors {
 //        // TODO: pull extra colors from config
 //    }
 
-    public function getColor(string $colorName, int $colorStrength):string{
+    public function getColor(string $colorName, int $colorStrength): string {
         $colorName = strtolower($colorName);
         $permitted_colors = $this->getColorNames();
         $permitted_color_strengths = array_keys(
@@ -310,104 +333,124 @@ class TailwindColors {
         }
     }
 
-    public function getColorNames():array{
+    public function getColorNames(): array {
         return array_keys(self::$colorPalette);
     }
 
-    public function black():string{
+    public function black(): string {
         return $this->getColor('black', 0);
     }
 
-    public function white():string{
+    public function white(): string {
         return $this->getColor('white', 0);
     }
 
-    public function slate(int $colorStrength):string{
+    public function slate(int $colorStrength): string {
         return $this->getColor('slate', $colorStrength);
     }
 
-    public function gray(int $colorStrength):string{
+    public function gray(int $colorStrength): string {
         return $this->getColor('gray', $colorStrength);
     }
 
-    public function zinc(int $colorStrength):string{
+    public function zinc(int $colorStrength): string {
         return $this->getColor('zinc', $colorStrength);
     }
 
-    public function neutral(int $colorStrength):string{
+    public function neutral(int $colorStrength): string {
         return $this->getColor('neutral', $colorStrength);
     }
 
-    public function stone(int $colorStrength):string{
+    public function stone(int $colorStrength): string {
         return $this->getColor('stone', $colorStrength);
     }
 
-    public function red(int $colorStrength):string{
+    public function red(int $colorStrength): string {
         return $this->getColor('red', $colorStrength);
     }
 
-    public function orange(int $colorStrength):string{
+    public function orange(int $colorStrength): string {
         return $this->getColor('orange', $colorStrength);
     }
 
-    public function amber(int $colorStrength):string{
+    public function amber(int $colorStrength): string {
         return $this->getColor('amber', $colorStrength);
     }
 
-    public function yellow(int $colorStrength):string{
+    public function yellow(int $colorStrength): string {
         return $this->getColor('yellow', $colorStrength);
     }
 
-    public function lime(int $colorStrength):string{
+    public function lime(int $colorStrength): string {
         return $this->getColor('lime', $colorStrength);
     }
 
-    public function green(int $colorStrength):string{
+    public function green(int $colorStrength): string {
         return $this->getColor('green', $colorStrength);
     }
 
-    public function emerald(int $colorStrength):string{
+    public function emerald(int $colorStrength): string {
         return $this->getColor('emerald', $colorStrength);
     }
 
-    public function teal(int $colorStrength):string{
+    public function teal(int $colorStrength): string {
         return $this->getColor('teal', $colorStrength);
     }
 
-    public function cyan(int $colorStrength):string{
+    public function cyan(int $colorStrength): string {
         return $this->getColor('cyan', $colorStrength);
     }
 
-    public function sky(int $colorStrength):string{
+    public function sky(int $colorStrength): string {
         return $this->getColor('sky', $colorStrength);
     }
 
-    public function blue(int $colorStrength):string{
+    public function blue(int $colorStrength): string {
         return $this->getColor('blue', $colorStrength);
     }
 
-    public function indigo(int $colorStrength):string{
+    public function indigo(int $colorStrength): string {
         return $this->getColor('indigo', $colorStrength);
     }
 
-    public function violet(int $colorStrength):string{
+    public function violet(int $colorStrength): string {
         return $this->getColor('violet', $colorStrength);
     }
 
-    public function purple(int $colorStrength):string{
+    public function purple(int $colorStrength): string {
         return $this->getColor('purple', $colorStrength);
     }
 
-    public function fuchsia(int $colorStrength):string{
+    public function fuchsia(int $colorStrength): string {
         return $this->getColor('fuchsia', $colorStrength);
     }
 
-    public function pink(int $colorStrength):string{
+    public function pink(int $colorStrength): string {
         return $this->getColor('pink', $colorStrength);
     }
 
-    public function rose(int $colorStrength):string{
+    public function rose(int $colorStrength): string {
         return $this->getColor('rose', $colorStrength);
     }
 
+    // the following are aliases colors that have been renamed in TailwindCSS v3.0
+    public function lightBlue(int $colorStrength): string {
+        return $this->sky($colorStrength);
+    }
+
+    public function warmGray(int $colorStrength): string {
+        return $this->stone($colorStrength);
+    }
+
+    public function trueGray(int $colorStrength): string {
+        return $this->neutral($colorStrength);
+    }
+
+    public function coolGray(int $colorStrength): string {
+        return $this->gray($colorStrength);
+    }
+
+    public function blueGray(int $colorStrength): string {
+        return $this->slate($colorStrength);
+    }
 }
