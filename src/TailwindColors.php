@@ -433,4 +433,24 @@ class TailwindColors {
         return $this->getColor('rose', $colorStrength);
     }
 
+    // the following are aliases colors that have been renamed in TailwindCSS v3.0
+    public function lightBlue(int $colorStrength): string {
+        return $this->sky($colorStrength);
+    }
+
+    public function warmGray(int $colorStrength): string {
+        return $this->stone($colorStrength);
+    }
+
+    public function trueGray(int $colorStrength): string {
+        return $this->neutral($colorStrength);
+    }
+
+    public function coolGray(int $colorStrength): string {
+        return $this->gray($colorStrength);
+    }
+
+    public function blueGray(int $colorStrength): string {
+        return $this->slate($colorStrength);
+    }
 }
